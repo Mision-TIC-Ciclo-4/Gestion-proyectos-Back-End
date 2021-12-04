@@ -4,6 +4,7 @@ import { tiposUsuario } from '../modelos/usuario/tipos.js';
 import { tiposProyecto }  from '../modelos/proyecto/tipos.js';
 import { tiposAvance } from '../modelos/avance/tipos.js';
 import { tiposInscripcion } from '../modelos/inscripcion/tipos.js';
+import { tiposAutenticacion} from './auth/tipos.js';
 
 const tiposGlobales = gql`
     scalar Date
@@ -11,4 +12,10 @@ const tiposGlobales = gql`
     
         
 `;
-export const tipos =[tiposGlobales, tiposEnums, tiposUsuario, tiposProyecto, tiposAvance, tiposInscripcion];
+export const tipos =[tiposGlobales, 
+    tiposEnums, 
+    tiposUsuario, 
+    tiposProyecto, 
+    tiposAvance, 
+    tiposInscripcion,
+    tiposAutenticacion,];

@@ -19,14 +19,15 @@ const userSchema = new Schema(
     validate: {
       validator: function (correo) {
         return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(correo);
-        //   },
-        // validator: async (correo) => {
-        //   if (!(correo.includes('@') && correo.includes('.'))) {
-        //     return false;
-        //   }
+       
       },
       message: "Por favor ingrese un correo válido",
     },
+  },
+
+  password: {
+    type: String,
+    required: true,
   },
   identificacion: {
     type: String,
