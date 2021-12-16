@@ -35,9 +35,7 @@ const server = new ApolloServer({
 
 const app = express();
 app.use(express.json());
-app.use(cors({
-  origin:"https://adminprojects-front.herokuapp.com/"
-}));
+app.use(cors());
 
 app.listen({ port: process.env.PORT || 4000 },async ()=>{
   await connectDB();
